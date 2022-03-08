@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagememe"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/black"
+        tools:srcCompat="@tools:sample/avatars"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"/>
+    <Button
+        android:id="@+id/sharebutton"
+        android:layout_below="@id/imagememe"
+        android:layout_width="180dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="70dp"
+        android:text="Share"
+        android:onClick="sharememe"
+        />
+
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_below="@id/imagememe"
+        android:layout_toRightOf="@id/sharebutton"
+        android:layout_width="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="70dp"
+        android:text="Next"
+        android:onClick="nextmeme"
+        />
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_below="@id/sharebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6816715955008902/5216833351">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
